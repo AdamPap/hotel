@@ -86,9 +86,9 @@
         </div>
     </section>
 
-    <section class="container-fluid justify-content-center blue-text">
+    <section id="reservation" class="container d-flex justify-content-center blue-text">
         <div class="booking-form">
-            <h4 class="blue-text text-center mb-3">Make Reservation</h4>
+            <h3 class="blue-text text-center mb-4"><span class="heading-border-bottom pb-1">Make Reservation</span></h3>
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -128,15 +128,33 @@
                         <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
                     </div>
                 </div>
-                <!-- <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Suite Type</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Superior Suite</option>
+                            <option>Standard Suite</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Adults</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label" for="date">Date</label>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputState">Stay</label>
+                        <input class="form-control" type="number" name="stay" min="1" max="15" placeholder="Days">
+                    </div>
                 </div>
-            </div> -->
-                <button type="submit" class="btn btn-outline-primary">Make Reservation</button>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-lg btn-outline-primary">Make Reservation</button>
+                </div>
             </form>
         </div>
     </section>
