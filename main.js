@@ -80,6 +80,11 @@ if (filename === "index") {
     })
 }
 
+// $('.dropdown').on("click", function () {
+//     if (y < 200) {
+//         $('#dropdownMenuButton').css("background-color", "transparent");
+//     }
+// })
 
 $('#big-navbar-rooms .navbar-brand  #logo').attr("src", "images/dark_logo.png");
 $('#navbar-rooms .nav-link').css("color", "#192951");
