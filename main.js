@@ -2,6 +2,46 @@ var index = location.pathname.lastIndexOf("/") + 1;
 var filenameWithExtension = location.pathname.substr(index);
 var filename = filenameWithExtension.split(".")[0];
 
+const h2 = document.querySelectorAll('h2.content-title');
+const h4 = document.querySelectorAll('h4.content-title');
+
+observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            // console.log('in the view');
+            console.log($(entry.target));
+
+            if ($(entry.target).is(h2)) {
+                $(entry.target).addClass("animate__animated animate__slideInLeft");
+                $(entry.target).next().addClass("animate__animated animate__slideInRight");
+            }
+            if ($(entry.target).is(h4)) {
+                $(entry.target).addClass("animate__animated animate__fadeInDown");
+            }
+
+            // $('section h2.content-title').addClass("animate__animated animate__slideInLeft");
+        } else {
+            // console.log('out of view');
+            if ($(entry.target).is(h2)) {
+                $(entry.target).removeClass("animate__animated animate__slideInLeft");
+                $(entry.target).next().removeClass("animate__animated animate__slideInRight");
+            }
+            if ($(entry.target).is(h4)) {
+                $(entry.target).removeClass("animate__animated animate__fadeInDown");
+            }
+            // $('section h2.content-title').removeClass("animate__animated animate__slideInLeft");
+        }
+    });
+});
+
+h2.forEach(sec => {
+    observer.observe(sec);
+});
+
+h4.forEach(sec => {
+    observer.observe(sec);
+});
+
 $(document).scroll(function () {
     var y = $(this).scrollTop();
 
@@ -51,32 +91,26 @@ $(document).scroll(function () {
     }
 
     // ANIMATIONS
-    if (filename === "index" || filename === "") {
-        var philosophy = $("#section-2").height();
-        // var philosophy_d = $("#section-2").offset().top - $(window).height();
-        if (y > philosophy / 2) {
-            console.log("SUP");
-            $('#section-2 h2.content-title').addClass("animate__animated animate__slideInLeft");
-            // $('hr').addClass("animate__animated animate__slideInRight");
-        }
-        if (y > philosophy + 100) {
-            $('#philosophy-img').addClass("animate__animated animate__fadeInBottomLeft");
-            $('.text-content').addClass("animate__animated animate__fadeIn");
-        }
-        if (y > 800) {
-            $('#location-section h2.content-title').addClass("animate__animated animate__slideInLeft");
-            $('hr').addClass("animate__animated animate__slideInRight");
-        }
-        console.log("SCROLL " + y)
-        console.log("HEIGHT " + $("#section-2").height());
-    }
+
+    // if (filename === "index" || filename === "") {
+    //     var philosophy = $("#section-2").height();
+    //     if (y > philosophy / 2) {
+    //         // console.log("SUP");
+    //         $('#section-2 h2.content-title').addClass("animate__animated animate__slideInLeft");
+    //     }
+    //     if (y > philosophy + 100) {
+    //         $('#philosophy-img').addClass("animate__animated animate__fadeInBottomLeft");
+    //         $('.text-content').addClass("animate__animated animate__fadeIn");
+    //     }
+    //     if (y > 800) {
+    //         $('#location-section h2.content-title').addClass("animate__animated animate__slideInLeft");
+    //         $('hr').addClass("animate__animated animate__slideInRight");
+    //     }
+    //     // console.log("SCROLL " + y)
+    //     // console.log("HEIGHT " + $("#section-2").height());
+    // }
 });
 
-// if ($(".show").is(":visible")) {
-//     $('.navbar').removeClass("bg-transparent");
-//     $('.navbar').css("background-color", "white");
-//     // alert("Yaw")
-// }
 var clicks = 0;
 if (filename === "index" || filename === "") {
     $(".navbar-toggler").on("click", function () {
@@ -101,11 +135,6 @@ if (filename === "index" || filename === "") {
     })
 }
 
-// $('.dropdown').on("click", function () {
-//     if (y < 200) {
-//         $('#dropdownMenuButton').css("background-color", "transparent");
-//     }
-// })
 
 $('#big-navbar-rooms .navbar-brand  #logo').attr("src", "images/dark_logo.png");
 $('#navbar-rooms .nav-link').css("color", "#192951");
@@ -117,20 +146,3 @@ console.log(location.pathname);
 console.log(filename);
 
 
-// if (!!window.IntersectionObserver) {
-//     let observer = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 console.log(entry);
-//                 // console.log(entry["target"].next());
-//                 $('hr').addClass("animate__animated animate__bounceInRight")
-//             }
-//             else {
-//                 $('hr').removeClass("animate__animated animate__bounceInRight")
-//             }
-//         });
-//     }, { rootMargin: "0px 0px 100px 0px" });
-//     document.querySelectorAll('h2').forEach(h2 => { observer.observe(h2) });
-// }
-
-// else document.querySelector('#warning').style.display = 'block';
