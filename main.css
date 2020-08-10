@@ -483,6 +483,7 @@ hr {
 
 .contact-title {
     font-size: 1.5rem;
+    color: #b7a08b;
 }
 
 .contact-info > p {
@@ -491,6 +492,7 @@ hr {
 
 .follow-title {
     font-size: 1.5rem;
+    color: #b7a08b;
 }
 
 .follow-info {
@@ -655,9 +657,10 @@ hr {
     margin-bottom: 40px;
 }
 
-#contact-begin {
+/* TODO */
+/* #contact-begin {
     margin-top: ;
-}
+} */
 
 .light-bg-color-left {
     background-color: #ececd7;
@@ -700,13 +703,19 @@ hr {
 
 @media (max-width: 768px){
     #amenities .row {
-        margin-left: 197px;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 650px){
+    #amenities .row {
+        margin-left: 140px;
     }
 }
 
 @media (max-width: 576px){
     #amenities .row {
-        margin-left: 95px;
+        margin-left: 45px;
     }
 }
 
@@ -855,4 +864,26 @@ hr {
     margin-bottom: 10px;
     margin-top: 5px;
     letter-spacing: 2px;
+}
+
+h2.content-title {
+    letter-spacing: 2px;
+}
+
+@media (min-width: 1275px) {
+    .text-content {
+        width: 75%;
+    }
+    .text-content-left {
+        width: 75%;
+    }
+}
+
+.footer-links {
+    font-size: 1.15rem;
+    color: #b7a08b;
+}
+
+#booking-begin {
+    min-height: 150px;
 }

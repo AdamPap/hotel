@@ -15,7 +15,7 @@ $(document).scroll(function () {
     var anim_done = false;
     $(".collapse").removeClass("show");
 
-    if (filename === "index") {
+    if (filename === "index" || filename === "") {
         if (y > 200) {
 
             $('.navbar').removeClass("bg-transparent");
@@ -49,6 +49,27 @@ $(document).scroll(function () {
             $(".help-button").addClass("animate__animated animate__bounceOutRight");
         }
     }
+
+    // ANIMATIONS
+    if (filename === "index" || filename === "") {
+        var philosophy = $("#section-2").height();
+        // var philosophy_d = $("#section-2").offset().top - $(window).height();
+        if (y > philosophy / 2) {
+            console.log("SUP");
+            $('#section-2 h2.content-title').addClass("animate__animated animate__slideInLeft");
+            // $('hr').addClass("animate__animated animate__slideInRight");
+        }
+        if (y > philosophy + 100) {
+            $('#philosophy-img').addClass("animate__animated animate__fadeInBottomLeft");
+            $('.text-content').addClass("animate__animated animate__fadeIn");
+        }
+        if (y > 800) {
+            $('#location-section h2.content-title').addClass("animate__animated animate__slideInLeft");
+            $('hr').addClass("animate__animated animate__slideInRight");
+        }
+        console.log("SCROLL " + y)
+        console.log("HEIGHT " + $("#section-2").height());
+    }
 });
 
 // if ($(".show").is(":visible")) {
@@ -57,7 +78,7 @@ $(document).scroll(function () {
 //     // alert("Yaw")
 // }
 var clicks = 0;
-if (filename === "index") {
+if (filename === "index" || filename === "") {
     $(".navbar-toggler").on("click", function () {
         // if ($(".navbar-collapse").is(":visible")) {
         if ($(".collapse").css("display") === "none") {
@@ -94,3 +115,22 @@ $('.navbar .navbar-nav .drop-links').css('color', '#192951');
 
 console.log(location.pathname);
 console.log(filename);
+
+
+// if (!!window.IntersectionObserver) {
+//     let observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 console.log(entry);
+//                 // console.log(entry["target"].next());
+//                 $('hr').addClass("animate__animated animate__bounceInRight")
+//             }
+//             else {
+//                 $('hr').removeClass("animate__animated animate__bounceInRight")
+//             }
+//         });
+//     }, { rootMargin: "0px 0px 100px 0px" });
+//     document.querySelectorAll('h2').forEach(h2 => { observer.observe(h2) });
+// }
+
+// else document.querySelector('#warning').style.display = 'block';
