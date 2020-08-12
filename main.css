@@ -5,8 +5,66 @@
 * Browsers: last 4 version
 */
 
+
+/* LOADER */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    background-color: white;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+
+.loader {
+    height: 100px;
+    width: 100px;
+    /* background-color: black; */
+    border-radius: 50%;
+    border-top: 5px solid #192951;
+    border-left: 5px solid #ececd7;
+    border-right: 5px solid #ececd7;
+    border-bottom: 5px solid #192951;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    margin-left: -50px;
+    margin-top: -50px;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+@keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -192,7 +250,6 @@ body {
     letter-spacing: 2px;
 }
 
-
 #background-image {
     background-image: url("images/hotel-view-3.jpg");
     background-size: cover;
@@ -374,7 +431,7 @@ hr {
 }
 
 #location-section {
-    min-height: 200px;
+    min-height: 250px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -382,6 +439,86 @@ hr {
 
 .beach-img:hover {
     opacity: 0.4;
+}
+
+/*  */
+.carousel-fade .carousel-item {
+	opacity: 0;
+	-webkit-transition-duration: .8s;
+	     -o-transition-duration: .8s;
+	        transition-duration: .8s;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	-webkit-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	        transform: translateX(0);
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+}
+/*  */
+
+.carousel-inner {
+    height: 60vh;
+}
+
+@media (max-width: 873px) {
+    .carousel-inner {
+        height: 100%;
+    }
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+/* .carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    transition-duration: 300ms;
+}
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+} */
+
+.carousel-item {
+    margin-top: -20%;
 }
 
 .behind-color {
@@ -425,6 +562,7 @@ hr {
 .footer {
     background-color: #ececd7;
     color: #192951;
+    
 }
 
 .footer-logo {
@@ -486,6 +624,14 @@ hr {
     color: #b7a08b;
 }
 
+/* .contact i {
+    color: #b7a08b; 
+}
+
+.social i {
+    color: #b7a08b;
+} */
+
 .contact-info > p {
     font-size: 1.2rem;
 }
@@ -497,6 +643,7 @@ hr {
 
 .follow-info {
     font-size: 1.2rem;
+    margin-left: 3px;
 }
 
 .arrow-icon {
@@ -549,6 +696,66 @@ hr {
 
 .animate__animated .animate__bounceInRight {
     --animate-delay: 0.1s;
+}
+
+#testimonials {
+    min-height: 90vh;
+    position: relative;
+}
+
+.card-img {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.card-hr {
+    border-top: 1px solid #c5ab917c;
+    width: 60%;
+    margin: 3px auto 20px auto;
+}
+
+.stars {
+    color: gold;
+}
+
+.card {
+    border-radius: initial;
+    height: 100%;
+    padding: 5px;
+    border: 5px solid #ececd7;
+    /* background: linear-gradient(180deg, rgba(183, 160, 139, 0.719) 0%, rgba(255,255,255,1) 100%); */
+}
+
+.card-text {
+    width: 80%;
+    margin: auto;
+    color: #192951;
+}
+
+.card-title {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #192951;
+    margin-bottom: 1.8rem;
+}
+
+.author {
+    color: #917b67;
+}
+
+.test-class {
+    background-image: url(images/test-pool-overlay.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* ACCOMMOIDATION */
@@ -790,6 +997,34 @@ hr {
 
 #background-image-contact {
     background-image: url("images/hotel-2 (1).jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#image-facilities {
+    position: relative;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 73px;
+}
+
+#background-image-facilities {
+    background-image: url("images/pool2.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;

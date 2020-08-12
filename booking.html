@@ -3,22 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="-1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity=""
         crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Prata" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/browser_icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Seaside</title>
 </head>
 
 <body style="margin-top: 90px;">
+
+    <div class="se-pre-con">
+        <div class="loader"></div>
+    </div>
+
     <nav id="big-navbar-rooms" class="navbar navbar-expand-md navbar-light fixed-top">
         <a class="navbar-brand" href="index.html">
             <img id="logo" src="images/new1.png" alt="logo_img">
@@ -76,18 +84,19 @@
     <section id="suite-begin" class="container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Book Your Suite</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Book Your Suite</h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <div class="col-md-6 text-center moto mt-2">
-                <h4 class="blue-text content-title mt-3 ml-md-5 p-3">Book your dream<br><span id="customers">vacation
+                <h4 class="blue-text content-title mt-3 ml-md-5 p-3" data-aos="fade-down" data-aos-delay="500">Book your
+                    dream<br><span id="customers">vacation
                         now!</span></h4>
             </div>
         </div>
     </section>
 
     <section id="reservation" class="container d-flex justify-content-center blue-text">
-        <div class="booking-form">
+        <div class="booking-form" data-aos="fade-up">
             <h3 class="blue-text text-center mb-4"><span class="heading-border-bottom pb-1">Make a Reservation</span>
             </h3>
             <form>
@@ -160,22 +169,22 @@
         </div>
     </section>
 
-    <section class="footer container-fluid mt-5">
+    <section class="footer container-fluid">
         <div class="row p-md-5 p-sm-2">
             <div class="col-lg-5 d-flex justify-content-center align-items-center">
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid py-5 footer-logo" src="images/dark_logo.png" alt="">
+                    <img class="img-fluid py-5 footer-logo" src="images/logo_footer.png" alt="" data-aos="fade-right">
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="row mb-3">
-                    <div class="col-12">
+                    <div class="col-12" data-aos="fade-in">
                         <h2 class="contact-title text-center text-lg-left">FIND US</h2>
                         <img class="img-fluid" src="images/map.png">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-6 contact p-4 d-flex flex-column align-items-betweeen">
+                    <div class="col-md-6 contact p-4 d-flex flex-column align-items-betweeen" data-aos="fade-up">
                         <h2 class="text-center text-md-left contact-title">CONTACT INFORMATION</h2>
                         <div class="d-flex flex-column justify-content-center text-center text-md-left contact-info">
                             <p><i class="fas fa-map-marker-alt"></i> Address, Chania, Crete</p>
@@ -183,7 +192,7 @@
                             <p><i class="far fa-envelope"></i> info@seaside-test.gr</p>
                         </div>
                     </div>
-                    <div class="col-md-6 social p-4">
+                    <div class="col-md-6 social p-4" data-aos="fade-up" data-aos-delay="200">
                         <h2 class="text-center text-lg-left follow-title">FOLLOW US</h2>
                         <div class="d-flex flex-column justify-content-center text-center text-lg-left follow-info">
                             <p><i class="fab fa-facebook-square"></i> Facebook</p>
@@ -196,6 +205,13 @@
 
             </div>
         </div>
+
+        <!-- <div class="row d-flex justify-content-center">
+            <p class="footer-links text-uppercase p-3 text-center">Home | Superior Suites | Standard Suites | Facilities
+                | Contact |
+                Booking</p>
+        </div> -->
+
         <div class="row d-flex justify-content-between bottom-footer">
             <p class="copyright ml-3"><i class="far fa-copyright"></i> Copyright 2020 - AP Development</p>
             <p class="policy mx-3"><a class="pol" href="#">PRIVACY POLICY</a> - <a class="pol" href="#">PAYMENT AND
@@ -210,6 +226,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity=""
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

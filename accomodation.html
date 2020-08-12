@@ -3,22 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="-1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity=""
         crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Prata" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/browser_icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Seaside</title>
 </head>
 
 <body style="margin-top: 90px;">
+
+    <div class="se-pre-con">
+        <div class="loader"></div>
+    </div>
+
     <nav id="big-navbar-rooms" class="navbar navbar-expand-md navbar-light fixed-top">
         <a class="navbar-brand" href="index.html">
             <img id="logo" src="images/new1.png" alt="logo_img">
@@ -88,11 +96,13 @@
     <section id="suite-begin" class="mt-2 mb-md-3 container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Superior Sea View Suites</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Superior Sea View Suites
+                </h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <div class="col-md-6 text-center moto mt-2">
-                <h4 class="blue-text content-title mt-3 ml-md-5 p-3">Luxury with<br><span id="customers">a spectacular
+                <h4 class="blue-text content-title mt-3 ml-md-5 p-3" data-aos="fade-down" data-aos-delay="500">Luxury
+                    with<br><span id="customers">a spectacular
                         view</span></h4>
             </div>
         </div>
@@ -103,21 +113,24 @@
             <div class="col-md-6 rel-pos d-flex justify-content-center">
                 <div class="light-bg-color-left"></div>
                 <div class="text-content-left ml-md-5 mt-sm-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam eligendi quaerat
+                    <p data-aos="fade-up-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+                        numquam eligendi quaerat
                         reprehenderit sint neque a culpa, atque omnis laudantium.</p>
-                    <p class="">Feram, ipsum dolor sit amet consectetur adipisicing elit. Autem odio in optio
+                    <p data-aos="fade-up-right">Feram, ipsum dolor sit amet consectetur adipisicing elit. Autem odio in
+                        optio
                         praesentium facilis
                         numquam exercitationem doloremque repellat porro? Assumenda ad beatae nemo rem iste. Integer
                         bibendum accumsan enim, a vestibulum purus euismod volutpat. Suspendisse bibendum arcu et
                         ultrices facilisis. Vivamus ut aliquet ligula, sed tempor leo. Proin congue lorem eget purus
                         hendrerit auctor. Suspendisse pretium, tellus ac feugiat accumsan, sapien tellus egestas eros,
                         viverra tincidunt nunc risus eget sapien. </p>
-                    <p>Nupan ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quod inventore commodi
+                    <p data-aos="fade-up-right">Nupan ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
+                        quod inventore commodi
                         explicabo. Ipsam, tempora!</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex">
-                <div class="philosophy-container align-self-center">
+                <div class="philosophy-container align-self-center" data-aos="fade-down-left" data-aos-offset="250">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 mt-5">
                             <!-- <img id="philosophy-img" class="img-fluid" src="hotel-1.jpg"> -->
@@ -133,8 +146,8 @@
     <section id="suite-begin" class="container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Amenities</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Amenities</h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <div class="col-md-6 text-center moto mt-2">
                 <!-- <h4 class="blue-text content-title mt-3 ml-5 p-3">Superior Suites<br><span id="customers">a speactacular
@@ -145,7 +158,7 @@
 
     <section id="amenities" class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <ul>
                     <li>WiFi Internet Connection</li>
                     <li>Air Conditioning</li>
@@ -154,7 +167,7 @@
                     <li>Alarm Clock</li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
                 <ul>
                     <li>Bathrobes & Slippers</li>
                     <li>Cable-Satellite TV</li>
@@ -163,7 +176,7 @@
                     <li>Hairdryer</li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
                 <ul>
                     <li>Daily Maid Service</li>
                     <li>Free Safe Deposit Box</li>
@@ -178,8 +191,8 @@
     <section id="suite-begin" class="container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Gallery</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Gallery</h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <div class="col-md-6 text-center moto mt-2">
                 <!-- <h4 class="blue-text content-title mt-3 ml-5 p-3">Superior Suites<br><span id="customers">a speactacular
@@ -188,7 +201,7 @@
         </div>
     </section>
 
-    <section class="suite-gallery container-fluid">
+    <section class="suite-gallery container-fluid" data-aos="fade-in">
         <div class="row">
             <div class="col-md-3 col-sm-6 p-0">
                 <img src="images/suite-6.jpg" alt="" class="img-fluid">
@@ -211,8 +224,8 @@
     <section id="booking-begin" class="container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Suite Availability</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Suite Availability</h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <!-- <div class="col-md-6 text-center moto mt-2">
                 <h4 class="blue-text content-title mt-3 ml-5 p-3">Check <br><span id="customers">Membership
@@ -222,7 +235,7 @@
     </section>
 
     <section class="container-fluid justify-content-center blue-text">
-        <div class="booking-form">
+        <div class="booking-form" data-aos="fade-up">
             <h4 class="blue-text text-center mb-3">Check Availability</h4>
             <div class="form-row d-flex justify-content-center align-center">
                 <div class="form-group col-md-2">
@@ -278,18 +291,18 @@
         <div class="row p-md-5 p-sm-2">
             <div class="col-lg-5 d-flex justify-content-center align-items-center">
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid py-5 footer-logo" src="images/dark_logo.png" alt="">
+                    <img class="img-fluid py-5 footer-logo" src="images/logo_footer.png" alt="" data-aos="fade-right">
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="row mb-3">
-                    <div class="col-12">
+                    <div class="col-12" data-aos="fade-in">
                         <h2 class="contact-title text-center text-lg-left">FIND US</h2>
                         <img class="img-fluid" src="images/map.png">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-6 contact p-4 d-flex flex-column align-items-betweeen">
+                    <div class="col-md-6 contact p-4 d-flex flex-column align-items-betweeen" data-aos="fade-up">
                         <h2 class="text-center text-md-left contact-title">CONTACT INFORMATION</h2>
                         <div class="d-flex flex-column justify-content-center text-center text-md-left contact-info">
                             <p><i class="fas fa-map-marker-alt"></i> Address, Chania, Crete</p>
@@ -297,7 +310,7 @@
                             <p><i class="far fa-envelope"></i> info@seaside-test.gr</p>
                         </div>
                     </div>
-                    <div class="col-md-6 social p-4">
+                    <div class="col-md-6 social p-4" data-aos="fade-up" data-aos-delay="200">
                         <h2 class="text-center text-lg-left follow-title">FOLLOW US</h2>
                         <div class="d-flex flex-column justify-content-center text-center text-lg-left follow-info">
                             <p><i class="fab fa-facebook-square"></i> Facebook</p>
@@ -324,6 +337,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity=""
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

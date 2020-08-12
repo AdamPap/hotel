@@ -3,22 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="-1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity=""
         crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Prata" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/browser_icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Seaside</title>
 </head>
 
 <body style="margin-top: 90px;">
+
+    <div class="se-pre-con">
+        <div class="loader"></div>
+    </div>
+
     <nav id="big-navbar-rooms" class="navbar navbar-expand-md navbar-light fixed-top">
         <a class="navbar-brand" href="index.html">
             <img id="logo" src="images/new1.png" alt="logo_img">
@@ -76,11 +84,12 @@
     <section id="suite-begin" class="container-fluid d-flex align-mid justify-content-center">
         <div class="row w-100">
             <div class="col-md-6">
-                <h2 class="blue-text content-title">Contact</h2>
-                <hr class="">
+                <h2 class="blue-text content-title" data-aos="fade-right" data-aos-delay="150">Contact</h2>
+                <hr class="" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
             </div>
             <div class="col-md-6 text-center moto mt-2">
-                <h4 class="blue-text content-title mt-3 ml-md-5 p-3">Feel free to contact us<br><span id="customers">for
+                <h4 class="blue-text content-title mt-3 ml-md-5 p-3" data-aos="fade-down" data-aos-delay="500">Feel free
+                    to contact us<br><span id="customers">for
                         additional information</span></h4>
             </div>
         </div>
@@ -91,11 +100,11 @@
             <div class="col-md-6 mt-5 border-right-custom">
                 <div class="row">
                     <div class="col-sm-12 d-flex justify-content-center">
-                        <img id="contact-logo" class="img-fluid" src="images/dark_logo.png" alt="">
+                        <img id="contact-logo" class="img-fluid" src="images/dark_logo.png" alt="" data-aos="fade-up">
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-sm-12 contact-info">
+                    <div class="col-sm-12 contact-info" data-aos="fade-up" data-aos-delay="200">
                         <p class="blue-text text-center">Address 45, Region | City | Country <br>
                             +30 11233143534 | +30 31233143534<br>
                             info@seaside-test.gr<br>
@@ -105,9 +114,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-up">
                 <div class="booking-form blue-text">
-                    <h4 class="blue-text text-center mb-3"><span class="heading-border-bottom pb-1">Contact Us</span>
+                    <h4 class="blue-text text-center mb-5"><span class="heading-border-bottom pb-1">Contact Us</span>
                     </h4>
                     <form>
                         <div class="form-row">
@@ -200,6 +209,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity=""
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
