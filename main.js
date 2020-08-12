@@ -1,8 +1,14 @@
-
-$(window).on('load', function () {
+$('<img/>').attr('src', 'images/hotel-view-3.jpg').on('load', function () {
     // Animate loader off screen
     $(".se-pre-con").fadeOut(300);
 });
+
+// $(document).ready(function () {
+//     // Animate loader off screen
+//     $(".se-pre-con").fadeOut(300);
+// });
+
+// add heavy images later
 
 var index = location.pathname.lastIndexOf("/") + 1;
 var filenameWithExtension = location.pathname.substr(index);
